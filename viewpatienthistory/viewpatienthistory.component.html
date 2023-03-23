@@ -1,0 +1,49 @@
+<h4><mat-icon>history</mat-icon> Patient Health Information</h4>
+<div>
+  <div class="mainclass">
+    <app-patient-card></app-patient-card>
+    <app-patientbg></app-patientbg>
+  </div>
+</div>
+<app-visit-details></app-visit-details>
+<app-keynotes></app-keynotes>
+
+<p style="border-top: 1px solid grey; padding-top: 15px">Observation made</p>
+<app-test-table></app-test-table>
+
+<mat-paginator
+  [pageSizeOptions]="[5, 10, 15]"
+  showFirstLastButtons
+></mat-paginator>
+<button
+  mat-stroked-button
+  style="
+    background-color: #2d3663;
+    padding: 27px 20px;
+    color: whitesmoke;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  "
+  color="primary"
+  mat-button
+  class="btn-class"
+  (click)="openDialogViewPrescription()"
+>
+  View prescription
+</button>
+<button
+  mat-stroked-button
+  color="primary"
+  style="
+    background-color: #2d3663;
+    padding: 27px 20px;
+    color: whitesmoke;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  "
+  mat-button
+  class="btn-class btn-class-close"
+  routerLink="/update-patient"
+>
+  Close
+</button>
